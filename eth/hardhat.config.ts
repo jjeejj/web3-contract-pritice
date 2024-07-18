@@ -11,7 +11,7 @@ const config: HardhatUserConfig = {
   networks: {
     sepolia: {
       url: ETH_SEPOILA_URL,
-      accounts: [PRIVATE_EKY]
+      // accounts: [PRIVATE_EKY]
     }
   },
   etherscan: {

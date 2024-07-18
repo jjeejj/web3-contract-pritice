@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import hre, { ethers } from "hardhat";
+import  { ethers } from "hardhat";
 
 describe("MyTestToken", function () { 
     const useMTT = async () => {
@@ -10,6 +10,7 @@ describe("MyTestToken", function () {
     it("Deployment", async function () {
         const [owner] = await ethers.getSigners();
         const MTT = await useMTT();
-        expect(await MTT.target.valueOf)
+        expect(await MTT.totalSupply()).to.equal(1000000);
+        expect(await MTT.balanceOf(owner.address)).to.equal(1000000);
     })
 })
